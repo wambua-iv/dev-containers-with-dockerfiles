@@ -13,8 +13,9 @@ RUN apt-get update \
     # set up locale
     && locale-gen en_US.UTF-8 && fc-cache -vf
 
-RUN wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+RUN curl -sL https://deb.nodesource.com/setup_18.x -o /tmp/nodesource_setup.sh
 
-RUN bash install_nvm.sh && source ~/.profile
 
-RUN nvm install --lts
+RUN bash /tmp/nodesource_setup.sh
+
+RUN apt install nodejs
