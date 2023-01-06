@@ -1,8 +1,7 @@
 FROM ubuntu:focal
 
 
-RUN apt-get update && apt-get install --no-install-recommends \
-    curl \
+RUN apt-get update && apt-get install curl \
     git-core \
     wget \
     zsh
