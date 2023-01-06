@@ -1,10 +1,7 @@
 FROM ubuntu:focal
 
 
-RUN apt-get update && apt-get install curl \
-    git-core \
-    wget \
-    zsh
+RUN apt-get update 
 
 RUN curl -sL https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.0/install.sh -o install_nvm.sh
 
