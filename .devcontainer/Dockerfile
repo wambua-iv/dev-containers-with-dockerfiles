@@ -9,5 +9,6 @@ RUN apt-get update \
     wget \
     tree \
     jq \
+    fontconfig \
     # set up locale
     && locale-gen en_US.UTF-8 && fc-cache -vf
