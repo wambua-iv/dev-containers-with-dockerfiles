@@ -12,8 +12,7 @@ RUN apt-get update \
     fontconfig \
     # set up locale
     && locale-gen en_US.UTF-8 && fc-cache -vf
-
-RUN curl -sL https://deb.nodesource.com/setup_18.x -o /tmp/nodesource_setup.sh
+    && curl -sL https://deb.nodesource.com/setup_18.x -o /tmp/nodesource_setup.sh
 
 
 RUN bash /tmp/nodesource_setup.sh
